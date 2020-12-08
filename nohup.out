@@ -1,0 +1,572 @@
+Traceback (most recent call last):
+  File "api_NLP.py", line 10, in <module>
+    from mlstm_sentiment import predict_model
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 375
+    result = dict()
+                  ^
+TabError: inconsistent use of tabs and spaces in indentation
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+ * Restarting with stat
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Debugger is active!
+ * Debugger PIN: 272-363-402
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.921 seconds.
+Prefix dict has been built succesfully.
+2018-04-23 15:40:21.885532: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-23 15:40:21.885609: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-04-23 15:40:21.885634: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+10.2.10.120 - - [23/Apr/2018 15:40:23] "POST /sentiment?content=%E6%82%A3%E5%AD%A9%E5%AD%90%E6%84%9F%E5%86%92%E5%8F%91%E7%83%A7%E8%80%81%E4%B8%8D%E5%A5%BD%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%A3%85%E7%9A%84%EF%BC%8C%E6%89%93%E4%B8%80%E9%A1%BF%E5%B0%B1%E5%A5%BD%E4%BA%86 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:40:48] "GET /main/systax/parser HTTP/1.1" 404 -
+10.1.62.100 - - [23/Apr/2018 15:40:54] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:40:56] "GET /main/morphology/segmentor HTTP/1.1" 404 -
+10.1.62.100 - - [23/Apr/2018 15:41:09] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:41:11] "GET /main/morphology/segmentor HTTP/1.1" 404 -
+10.1.62.100 - - [23/Apr/2018 15:50:28] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:30] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:36] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:38] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:41] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:45] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:45] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:50:45] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/base.py:311: UserWarning: Trying to unpickle estimator SVC from version 0.18.1 when using version 0.19.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+10.1.62.100 - - [23/Apr/2018 15:50:59] "POST /classifier?content=%E5%AD%A9%E5%AD%90%E6%84%9F%E5%86%92%E5%8F%91%E7%83%A7%E8%80%81%E4%B8%8D%E5%A5%BD%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%A3%85%E7%9A%84%EF%BC%8C%E6%89%93%E4%B8%80%E9%A1%BF%E5%B0%B1%E5%A5%BD%E4%BA%86 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:51:25] "POST /sentiment?content=%E5%AD%A9%E5%AD%90%E6%84%9F%E5%86%92%E5%8F%91%E7%83%A7%E8%80%81%E4%B8%8D%E5%A5%BD%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%A3%85%E7%9A%84%EF%BC%8C%E6%89%93%E4%B8%80%E9%A1%BF%E5%B0%B1%E5%A5%BD%E4%BA%86 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:53:01] "POST /classifier?content=%E5%AD%A9%E5%AD%90%E6%84%9F%E5%86%92%E5%8F%91%E7%83%A7%E8%80%81%E4%B8%8D%E5%A5%BD%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%A3%85%E7%9A%84%EF%BC%8C%E6%89%93%E4%B8%80%E9%A1%BF%E5%B0%B1%E5%A5%BD%E4%BA%86 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:28] "POST /sentiment?content=%E5%AD%A9%E5%AD%90%E6%84%9F%E5%86%92%E5%8F%91%E7%83%A7%E8%80%81%E4%B8%8D%E5%A5%BD%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%A3%85%E7%9A%84%EF%BC%8C%E6%89%93%E4%B8%80%E9%A1%BF%E5%B0%B1%E5%A5%BD%E4%BA%86 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:32] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [23/Apr/2018 15:57:39] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:44] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:47] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:51] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:52] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:52] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:57:55] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 15:58:00] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 15:59:41] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:02:30] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:03:15] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:03:17] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:03:20] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:03:22] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.2.100.150 - - [23/Apr/2018 16:03:28] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:05:44] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:05:49] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:05:55] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:07:12] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:07:18] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [23/Apr/2018 16:07:22] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:44:16] "GET /index.js.map HTTP/1.1" 404 -
+10.1.62.100 - - [25/Apr/2018 08:45:04] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:45:38] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:45:40] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:46:03] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:46:21] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 08:46:22] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 10:06:28] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 10:06:40] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+10.1.62.100 - - [25/Apr/2018 10:06:47] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [25/Apr/2018 10:07:11] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [28/Apr/2018 14:54:23] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:24] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:26] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:31] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:43] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E5%B0%8F%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:45] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Apr/2018 14:54:55] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:25:39] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:25:51] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:25:53] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:25:56] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:26:35] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:26:48] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 10:26:51] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [16/May/2018 10:27:02] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+10.1.62.100 - - [16/May/2018 11:37:14] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [16/May/2018 11:37:19] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+ * Restarting with stat
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Debugger is active!
+ * Debugger PIN: 272-363-402
+Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+Loading model cost 1.529 seconds.
+Prefix dict has been built succesfully.
+10.1.62.100 - - [21/May/2018 10:36:57] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [21/May/2018 10:36:59] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [21/May/2018 10:37:04] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [21/May/2018 10:37:05] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [21/May/2018 10:37:10] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/werkzeug/filesystem.py:63: BrokenFilesystemWarning: Detected a misconfigured UNIX filesystem: Will use UTF-8 as filesystem encoding instead of 'ascii'
+  BrokenFilesystemWarning)
+10.1.62.100 - - [21/May/2018 10:37:10] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 238, in post
+    data = parse(content)
+  File "/nlp_api_ubuntu/ltp_parser.py", line 43, in parse
+    print(words_list, tags_list, symptom_flag_list)
+UnicodeEncodeError: 'ascii' codec can't encode character '\u8fd9' in position 2: ordinal not in range(128)
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/base.py:311: UserWarning: Trying to unpickle estimator SVC from version 0.18.1 when using version 0.19.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+10.1.62.100 - - [21/May/2018 10:37:23] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+2018-05-21 13:59:32.216161: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-21 13:59:32.216227: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-21 13:59:32.216241: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+10.1.62.100 - - [21/May/2018 13:59:34] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.2.10.114 - - [11/Jul/2018 17:03:42] "GET / HTTP/1.1" 404 -
+10.2.10.114 - - [11/Jul/2018 17:03:42] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [11/Jul/2018 17:04:12] "GET / HTTP/1.1" 404 -
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+ * Restarting with stat
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Debugger is active!
+ * Debugger PIN: 272-363-402
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+ * Restarting with stat
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Debugger is active!
+ * Debugger PIN: 272-363-402
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.888 seconds.
+Prefix dict has been built succesfully.
+10.1.62.100 - - [27/Dec/2018 17:13:15] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:13:16] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:13:20] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:13:21] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Running on http://0.0.0.0:5555/ (Press CTRL+C to quit)
+ * Restarting with stat
+Using TensorFlow backend.
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+ * Debugger is active!
+ * Debugger PIN: 272-363-402
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.892 seconds.
+Prefix dict has been built succesfully.
+10.1.62.100 - - [27/Dec/2018 17:17:46] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:18:25] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:18:48] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:18:52] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:18:57] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:33] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:35] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:35] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:38] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:38] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:40] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:41] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [27/Dec/2018 17:24:49] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:27:45] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:27:48] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:28:39] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:28:47] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:28:52] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E5%B0%8F%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:28:56] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E5%A4%A7%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:28:59] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:29:04] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 09:29:18] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+/nlp_api_ubuntu/venv/lib/python3.6/site-packages/sklearn/base.py:311: UserWarning: Trying to unpickle estimator SVC from version 0.18.1 when using version 0.19.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+10.1.62.100 - - [28/Dec/2018 09:29:35] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+2018-12-28 09:29:36.395036: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-28 09:29:36.395108: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-12-28 09:29:36.395124: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+10.1.62.100 - - [28/Dec/2018 09:29:38] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [28/Dec/2018 16:51:13] "POST /sentiment?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 273, in error_router
+    return original_handler(e)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/_compat.py", line 32, in reraise
+    raise value.with_traceback(tb)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 480, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/nlp_api_ubuntu/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 595, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/nlp_api_ubuntu/api_NLP.py", line 278, in post
+    result = predict_model(content)
+  File "/nlp_api_ubuntu/mlstm_sentiment.py", line 361, in predict_model
+    if pre:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+10.1.62.100 - - [28/Dec/2018 16:51:22] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:30] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:32] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:36] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:36] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:48] "POST /classifier?content=%E6%82%A3%E8%80%85%E6%97%A0%E6%98%8E%E6%98%BE%E8%AF%B1%E5%9B%A0%E4%B8%8B%E5%87%BA%E7%8E%B0%E8%83%B8%E7%97%9B%EF%BC%8C%E5%8F%8C%E4%B8%8B%E8%82%A2%E6%9C%AA%E8%A7%81%E6%B0%B4%E8%82%BF%E3%80%82%E4%BB%8A%E8%A1%A5%E5%85%85%E8%AF%8A%E6%96%AD%EF%BC%9A%E8%82%BA%E9%83%A8%E6%84%9F%E6%9F%93%E3%80%82%E6%82%A3%E8%80%85%E8%88%8C%E7%BA%A2%EF%BC%8C%E8%8B%94%E9%BB%84%E8%85%BB%EF%BC%8C%E8%84%89%E5%BC%A6%E7%BB%86%E4%BA%88%E8%8D%86%E9%93%B6%E5%90%88%E5%89%822%E7%93%B6%E7%96%8F%E9%A3%8E%E6%B8%85%E7%83%AD HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:51:48] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:09] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:14] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:20] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:21] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:31] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:38] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:39] "POST /segmentor?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:41] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:42] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:44] "POST /entity?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:52:56] "POST /freq?content=%E6%82%A3%E8%80%85%E9%AB%98%E8%A1%80%E5%8E%8B%E5%92%8C%E5%BF%83%E8%84%8F%E7%97%85%E4%BA%94%E5%B9%B4%EF%BC%8C%E7%8E%B0%E5%87%BA%E7%8E%B0%E5%8F%8D%E5%A4%8D%E6%B4%BB%E5%8A%A8%E5%90%8E%E7%83%A6%E6%B8%B4%E5%A4%9A%E9%A5%AE%E3%80%81%E6%B0%94%E4%BF%83%E3%80%81%E5%BF%83%E5%8A%9B%E8%A1%B0%E7%AB%AD%E5%8D%81%E4%BD%99%E5%B9%B4%E3%80%82%E5%81%B6%E5%B0%94%E4%BC%B4%E6%9C%89%E8%85%B9%E8%83%80%EF%BC%8C%E5%89%A7%E7%83%88%E5%A4%B4%E7%97%9B%EF%BC%8C%E8%B4%A8%E7%A8%80%EF%BC%8C%E5%8F%91%E7%83%AD%EF%BC%8C%E6%88%91%E8%A7%89%E5%BE%97%E6%88%91%E6%9C%89%E7%B3%96%E5%B0%BF%E7%97%85&tags=n&tags=v&tags=a&tags=symptom HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:06] "POST /text_similar?content1=%E9%AB%98%E8%80%83&content2=%E4%B8%AD%E8%80%83&type=9 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:06] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:14] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:14] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:21] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:21] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:28] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:28] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:35] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:35] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:54] "POST /text_similar?content1=%E6%80%8E%E4%B9%88%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E5%91%A2&content2=%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7&type=8 HTTP/1.1" 200 -
+10.1.62.100 - - [28/Dec/2018 16:53:54] "POST /parser?content=%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BE%88%E9%95%BF%E5%BE%88%E9%95%BF%E7%9A%84%E5%8F%A5%E5%AD%90 HTTP/1.1" 200 -
