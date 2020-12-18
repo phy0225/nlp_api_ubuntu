@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-__author__ = '出门向右'
+__author__ = 'PHY'
 """
     基于特定症状分词接口
     input:一段需要分词的文本
@@ -9,8 +9,10 @@ __author__ = '出门向右'
 import re
 import json
 import jieba.posseg as pseg
-from init_w2v import init
 import sys
+
+from init_w2v import init
+
 
 def cut_sentence(sentence, string=False):
     """
@@ -19,16 +21,14 @@ def cut_sentence(sentence, string=False):
     """
     if not string:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
-            words.append([key.word,key.flag])
+        for key in pseg.cut(sentence, HMM=True):
+            words.append([key.word, key.flag])
         return words
     else:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
+        for key in pseg.cut(sentence, HMM=True):
             words.append(key.word + '/' + key.flag)
         return ' '.join(words)
-
-
 
 
 def format_words_tags(words_tags):
@@ -43,8 +43,6 @@ def format_words_tags(words_tags):
     return ''.join(words) + '/symptom'
 
 
-
-
 def build_test_data_from_crf(text, sty_json=True):
     """
     根据crf识别结果构建测试语料
@@ -53,7 +51,7 @@ def build_test_data_from_crf(text, sty_json=True):
     pattern_sub_sign = re.compile('[<|>]')
     pattern_sp = re.compile('(<.*?>/x)')
 
-    file_json = open(sys.path[0] + '/temp/result_symptomDic.json','r')  # xx个
+    file_json = open('temp/result_symptomDic.json', 'r')  # xx个
     json_list = json.load(file_json)
     file_json.close()
     
@@ -88,7 +86,7 @@ def build_test_data_from_crf(text, sty_json=True):
         try:
             word = i.split('/')[0]
             propt = i.split('/')[1]
-            if propt!='x':
+            if propt != 'x':
                 rjs.append(word)
         except:
             error.append(i)
@@ -96,8 +94,3 @@ def build_test_data_from_crf(text, sty_json=True):
         return rjs
     else:
         return words_tags
-
-
-    
-    
-

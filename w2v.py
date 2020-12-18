@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-__author__ = '出门向右'
+__author__ = 'PHY'
 
 '''
     input：字符串【单个词语】
@@ -10,8 +10,9 @@ __author__ = '出门向右'
 import time
 import argparse
 import numpy as np
-from util_w2v import read_lines
 from gensim import models
+
+from util_w2v import read_lines
 from cut_w2v import build_test_data_from_crf
 
 
@@ -34,6 +35,7 @@ def config_train():
     args = parser.parse_args()
     
     return args
+
 
 args = config_train()
 
@@ -58,6 +60,7 @@ def load_cilin():
                 cilin_dict[items[i]] = items[:i] + items[i+1:]
     return cilin_dict
 
+
 def get_syn_word(synset, w2v_model):
     """
     Args:
@@ -71,6 +74,7 @@ def get_syn_word(synset, w2v_model):
             return word
     return None
 
+
 def word_weights(word):
     """
     初始化word_weights
@@ -83,7 +87,7 @@ def word_weights(word):
     word_embed = models.Word2Vec.load(args.word_embed_file)
     word_embed_dim = word_embed.vector_size
     cilin_dict = load_cilin()  # 加载同义词词林
-    random_vec = np.random.uniform(-1,1,size=(word_embed_dim,))
+    random_vec = np.random.uniform(-1, 1, size=(word_embed_dim,))
 
     if word in word_embed:
         return word_embed[word], 1  # 在词向量中存在的数量
@@ -114,7 +118,7 @@ def word2vec_str(text):
     text = build_test_data_from_crf(text)
     # 提取词向量
     result = {}
-    for offset,word in enumerate(text):
+    for offset, word in enumerate(text):
         rs = {}
         to_str = []
         for i in word_weights(word)[0]:
@@ -133,13 +137,13 @@ if __name__ == '__main__':
     result = word2vec_str(text)
     result_list = []
     
-    for i,j in result.items():
-        for word,value in j.items():
+    for i, j in result.items():
+        for word, value in j.items():
             single_dic = {}
             single_dic['word'] = word
             single_dic['value'] = value
         result_list.append(single_dic)
-    print (result_list)
+    print(result_list)
 
     print('Done in %.1fs!' % (time.time()-t0))
 

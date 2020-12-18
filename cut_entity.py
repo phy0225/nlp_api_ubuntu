@@ -13,10 +13,6 @@ from init_entity import init
 import sys
 
 
-#ROOT = '/home/eli/nlp_api_ubuntu'
-ROOT = '/nlp_api_ubuntu'
-
-
 def cut_sentence(sentence, string=False):
     """
     :param sentence: str
@@ -24,15 +20,14 @@ def cut_sentence(sentence, string=False):
     """
     if not string:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
-            words.append([key.word,key.flag])
+        for key in pseg.cut(sentence, HMM=True):
+            words.append([key.word, key.flag])
         return words
     else:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
+        for key in pseg.cut(sentence, HMM=True):
             words.append(key.word + '/' + key.flag)
         return ' '.join(words)
-
 
 
 def format_words_tags(words_tags):
@@ -47,8 +42,6 @@ def format_words_tags(words_tags):
     return ''.join(words) + '/symptom'
 
 
-
-
 def build_test_data_from_crf(text):
     """
     根据crf识别结果构建测试语料
@@ -59,7 +52,7 @@ def build_test_data_from_crf(text):
         pattern_sub_sign = re.compile('[<|>]')
         pattern_sp = re.compile('(<.*?>/x)')
     
-        file_json = open(ROOT + '/temp/result_symptomDic.json','r')  # xx个
+        file_json = open('temp/result_symptomDic.json', 'r')  # xx个
         json_list = json.load(file_json)
         print(json_list)
         file_json.close()
@@ -103,16 +96,23 @@ def build_test_data_from_crf(text):
                 error.append(i)
         return rjs, error
     else:
-        return [],[]
+        return [], []
 
 
 if __name__ == '__main__':
-    
-    
-    text = '患者腹胀较前减轻，咳嗽，咳痰，量少色白，质稀，发热，乏力好转，胃纳一般，二便调，夜寐尚可。查体：全身皮肤粘膜轻度黄染，无瘀斑瘀点，全身浅表淋巴结未扪及肿大，蜘蛛痣（+），肝掌（＋）。巩膜黄染，腹膨隆，全腹无明显压痛、反跳痛、肌卫，肝肋下未及，脾脏肿大平脐，肝肾区叩痛（－），麦氏征（-），莫氏征（-），移动性浊音（+），肠鸣音不亢。四肢脊柱无红肿畸形，双下肢水肿。患者水肿较前加重，增加利尿剂剂量为速尿40mg qdpo，安体舒通80mg qdpo。补液后予拖拉塞米20mg 静推利尿减轻水肿。患者今晨发热38℃，咳嗽，咳痰，量少色白，质稀，予NS100ml+海西丁3.0g bid ivgtt抗感染，今补充诊断：肺部感染。患者舌红，苔黄腻，脉弦细予荆银合剂2瓶疏风清热。明晨急查血培养st!。患者尿常规示红细胞++，请肾病科会诊协助诊治。余治同前，继观。'
+
+    text = '患者腹胀较前减轻，咳嗽，咳痰，量少色白，质稀，发热，乏力好转，胃纳一般，二便调，' \
+           '夜寐尚可。查体：全身皮肤粘膜轻度黄染，无瘀斑瘀点，全身浅表淋巴结未扪及肿大，' \
+           '蜘蛛痣（+），肝掌（＋）。巩膜黄染，腹膨隆，全腹无明显压痛、反跳痛、肌卫，肝肋下未及，' \
+           '脾脏肿大平脐，肝肾区叩痛（－），麦氏征（-），莫氏征（-），移动性浊音（+），' \
+           '肠鸣音不亢。四肢脊柱无红肿畸形，双下肢水肿。患者水肿较前加重，' \
+           '增加利尿剂剂量为速尿40mg qdpo，安体舒通80mg qdpo。补液后予拖拉塞米20mg 静推利尿减轻水肿。' \
+           '患者今晨发热38℃，咳嗽，咳痰，量少色白，质稀，予NS100ml+海西丁3.0g bid ivgtt抗感染，' \
+           '今补充诊断：肺部感染。患者舌红，苔黄腻，脉弦细予荆银合剂2瓶疏风清热。明晨急查血培养st!。' \
+           '患者尿常规示红细胞++，请肾病科会诊协助诊治。余治同前，继观。'
     
     vl = init(text)
-    print (build_test_data_from_crf(text))
+    print(build_test_data_from_crf(text))
     
     
     

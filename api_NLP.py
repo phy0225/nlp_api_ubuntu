@@ -2,17 +2,18 @@
 
 from flask import Flask, jsonify
 from flask_restful import reqparse, Api, Resource
-from nlpir_entity import nlpir
-from stat_freq import build_test_data_from_crf
-from cut_freq import build_test_data_from_crf_cut
+
+import numpy as np
 from ltp_parser import parse
 from ltp_parser import segmentor_tag
-from mlstm_sentiment import predict_model
-from text_similar import cal_similarity
-from w2v import word2vec_str
-from classifier_text import  text_classifier
-import numpy as np
 
+from nlpir_entity import nlpir  # 提取疾病与症状
+from stat_freq import build_test_data_from_crf  # 词频统计
+from cut_freq import build_test_data_from_crf_cut  # 分词、词性标注
+from mlstm_sentiment import predict_model  # 情感分析
+from text_similar import cal_similarity  # 文本相似度
+from w2v import word2vec_str  # 词向量
+from classifier_text import text_classifier  # 文本分类
 
 app = Flask(__name__)
 api = Api(app)
@@ -31,17 +32,11 @@ class entity(Resource):
                 single_dic['disease'] = disease
                 single_dic['symptom'], single_dic['symptomAll'] = couple[0], couple[1]
                 result_list.append(single_dic)
-            result = {
-                    'code': 0,
-                    'message': '',
-                   } 
+            result = {'code': 0, 'message': ''}
             result['data'] = result_list
             return result
         except:
-            result = {
-                    'code': 1,
-                    'message': 'unknown error',
-                   } 
+            result = { 'code': 1, 'message': 'unknown error'}
             result['data'] = ''
             return result
 
@@ -99,7 +94,7 @@ class freq(Resource):
         result['symptom'] = result_symptom
         result['vn'] = result_vn
         
-        #select top_num from each tag of word
+        # select top_num from each tag of word
         if len(result['n']) <= 40:
             pass
         else:
@@ -119,8 +114,7 @@ class freq(Resource):
             pass
         else:
             result['symptom'] = sorted(result['symptom'], key=lambda item: item['count'], reverse=True)[:20]
-        
-        
+
         if len(result['vn']) <= 20:
             pass
         else:
@@ -133,10 +127,7 @@ class freq(Resource):
                     j['tag'] = i
                     result_selected.append(j)
                     
-        result_finally = {
-                    'code': 0,
-                    'message': '',
-                   } 
+        result_finally = {'code': 0,'message': ''}
         result_finally['data'] = result_selected
             
         return result_finally
@@ -236,10 +227,7 @@ class parser_ltp(Resource):
             return result
         else:
             data = parse(content)
-            result = {
-                    'code': 0,
-                    'message': '',
-                   } 
+            result = {'code': 0,'message': ''}
             result['data'] = data
             return result
 
@@ -262,10 +250,7 @@ class segmentor(Resource):
             id += 1
         
         segment_result = [item for item in segment_result if item['word'] not in ['<', '>', '']]
-        result = {
-                    'code': 0,
-                    'message': '',
-                   } 
+        result = {'code': 0, 'message': ''}
         result['data'] = segment_result
         return result
 
@@ -287,10 +272,7 @@ class sentiment(Resource):
             result_dic['positive'] = value
             result_list.append(result_dic)
         
-        result_finally = {
-            'code': 0,
-            'message': '',
-           } 
+        result_finally = {'code': 0,'message': ''}
         result_finally['data'] = result_list
         return result_finally
 
@@ -321,10 +303,7 @@ class text_similar(Resource):
         result_json = {}
         result_json['similar_vlaue'] = result
         
-        result_finally = {
-            'code': 0,
-            'message': '',
-           } 
+        result_finally = {'code': 0,'message': ''}
         result_finally['data'] = result_json
         return result_finally
 
@@ -360,7 +339,8 @@ category_dict = {
         11: '小儿哮喘',
         12: '胎教',
         13: '手足口病',
-        14: '婴幼儿腹泻',}
+        14: '婴幼儿腹泻'}
+
 
 class classifier(Resource):
     def post(self):
@@ -377,17 +357,11 @@ class classifier(Resource):
             result_json['class_num'] = result
             result_json['class_description'] = category_dict[result]
             
-            result_finally = {
-            'code': 0,
-            'message': '',
-           } 
+            result_finally = {'code': 0, 'message': ''}
             result_finally['data'] = result_json
             return result_finally
         except:
-            result_finally = {
-            'code': 1,
-            'message': '文本分类失败',
-           } 
+            result_finally = {'code': 1, 'message': '文本分类失败'}
             result_finally['data'] = ''
             return result_finally
 
@@ -397,10 +371,10 @@ api.add_resource(w2v, '/w2v')
 api.add_resource(text_similar, '/text_similar')
 api.add_resource(sentiment, '/sentiment')
 api.add_resource(parser_ltp, '/parser')
-api.add_resource(segmentor,'/segmentor')
+api.add_resource(segmentor, '/segmentor')
 api.add_resource(freq, '/freq')
 api.add_resource(entity, '/entity')
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=5555)
-#    app.run(host='127.0.0.1', debug=True, port=5555)

@@ -1,7 +1,6 @@
-#-*- encoding:utf-8 -*-
+# -*- encoding:utf-8 -*-
 import re
 
-__author__ = 'SUTL'
 
 def read_lines(path):
     all_lines = []

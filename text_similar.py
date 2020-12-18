@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-__author__ = '出门向右'
+__author__ = 'PHY'
 
 '''
     the similar of short text
@@ -10,19 +10,17 @@ __author__ = '出门向右'
 '''
 
 import time
-#import argparse
 import numpy as np
-from util_text_similar import read_lines
 from gensim import models
-#import sys
-#sys.path.append('../api1')
+
+from util_text_similar import read_lines
 from cut_text_similar import build_test_data_from_crf
+
 global args
 
-
 args = {
-        'cilin_file':'./external_data/cilin/cilin.txt',
-        'word_embed_file':'./w2v_model/w2v_word_model'
+        'cilin_file': './external_data/cilin/cilin.txt',
+        'word_embed_file': './w2v_model/w2v_word_model'
         }
 
 
@@ -45,6 +43,7 @@ def load_cilin():
                     continue
                 cilin_dict[items[i]] = items[:i] + items[i+1:]
     return cilin_dict
+
 
 def get_syn_word(synset, w2v_model):
     """
@@ -102,19 +101,18 @@ def dict_tranf(c_text):
     return x1, x2
 
 
-def cosVector(x,y):
+def cosVector(x, y):
     # 计算两个向量的余弦
-    if len(x)!=len(y):
+    if len(x) != len(y):
         return 0.2
     result1=0.0
     result2=0.0
     result3=0.0
     for i in range(len(x)):
-        result1+=x[i]*y[i]   #sum(X*Y)
-        result2+=x[i]**2     #sum(X*X)
-        result3+=y[i]**2     #sum(Y*Y)
+        result1 += x[i]*y[i]   # sum(X*Y)
+        result2 += x[i]**2     # sum(X*X)
+        result3 += y[i]**2     # sum(Y*Y)
     return result1/((result2*result3)**0.5)
-
 
 
 def cal_similarity(text1, text2, ty):
@@ -128,7 +126,7 @@ def cal_similarity(text1, text2, ty):
         c_text2, error2 = build_test_data_from_crf(text2)
         c11, c12 = dict_tranf(c_text1)
         c21, c22 = dict_tranf(c_text2)
-        if len(c12)>=1 and len(c22)>=1:
+        if len(c12) >= 1 and len(c22) >= 1:
             # 按照 symptom计算相似度
             return model.n_similarity(c12, c22)
         else:
@@ -147,6 +145,7 @@ def cal_similarity(text1, text2, ty):
         else:
             return abs(cosVector(vec1, vec2))
 
+
 if __name__ == '__main__':
     
     t0 = time.time()
@@ -157,13 +156,6 @@ if __name__ == '__main__':
     
     text1 = '大考'
     text2 = '头痛'
-    print (cal_similarity(text1, text2, 9))
+    print(cal_similarity(text1, text2, 9))
     
     print('Done in %.1fs!' % (time.time()-t0))
-
-
-
-
-
-
-

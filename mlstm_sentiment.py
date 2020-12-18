@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-__author__ = '出门向右'
+__author__ = 'PHY'
 """
     概率越大，越接近于1，即该病更可能患有。
 """
@@ -8,11 +8,13 @@ import time
 import pickle
 import argparse
 import numpy as np
+import pandas as pd
 from collections import defaultdict
+
 from util_sentiment import read_lines
 from cut_sentiment import build_test_data_from_crf
 from keras.models import load_model
-import pandas as pd
+
 global args
 
 
@@ -28,33 +30,33 @@ def config_train():
     parser.add_argument('--max_sent_len', type=str,
                         default=10,
                         help='the length of sentence by use')
-    
-    
+
     args = parser.parse_args()
     
     return args
 
-args = config_train()
 
+args = config_train()
 
 
 def load_sentiment_seed():
     """
     加载同义词词林
     """
-    path1 = './external_data/sentiment_seed/pos_seeds_second.txt'
-    path2 = './external_data/sentiment_seed/neg_seeds_second.txt'
+    path1 = 'external_data/sentiment_seed/pos_seeds_second.txt'
+    path2 = 'external_data/sentiment_seed/neg_seeds_second.txt'
     
     lines1 = read_lines(path1)
     lines2 = read_lines(path2)
     l1 = {}
-    for offset,i in enumerate(lines1):
+    for offset, i in enumerate(lines1):
         l1[i] = offset
     l2 = {}
-    for offset,i in enumerate(lines2):
+    for offset, i in enumerate(lines2):
         l2[i] = offset
     
     return l1, l2
+
 
 def get_syn_word(synset, w2v_model):
     """
@@ -79,9 +81,10 @@ def get_words_tags(sentence):
     """
     words, tags = [], []
     for item in sentence.split(' '):
+        # noinspection PyBroadException
         try:
             index = item.rindex('/')
-        except Exception as e:
+        except Exception:
             continue
         word = item[:index]
         tag = item[index+1:]
@@ -90,6 +93,7 @@ def get_words_tags(sentence):
         if tag:
             tags.append(tag)
     return words, tags
+
 
 def init_voc():
     """
@@ -113,7 +117,7 @@ def init_voc():
         for word in words:
             word_dict[word] += 1
     # 排序
-    word_dict = sorted(word_dict.items(),key=lambda d:d[0])
+    word_dict = sorted(word_dict.items(), key=lambda d:d[0])
     word_voc = dict()
     for i, item in enumerate(word_dict):
         word_voc[item[0]] = i + 1  # start from 1
@@ -131,7 +135,6 @@ def init_voc():
     return word_voc, tag_voc, label_voc, label_voc_rev
 
 
-
 def get_sentence_ids(words, tags, word_voc, tag_voc,
                      target_index, max_sent_len):
     """
@@ -147,7 +150,7 @@ def get_sentence_ids(words, tags, word_voc, tag_voc,
     word_arr = np.zeros((max_sent_len,), dtype='int32')
     tag_arr = np.zeros((max_sent_len,), dtype='int32')
     position_arr = np.zeros((max_sent_len,), dtype='int32')
-    shift = 0# max_sent_len - len(words)
+    shift = 0  # max_sent_len - len(words)
     for i in range(len(words)):
         word = words[i]
         if word in word_voc:
@@ -163,6 +166,7 @@ def get_sentence_ids(words, tags, word_voc, tag_voc,
     for i in range(len(words)):
         position_arr[i+shift] = i-target_index+max_sent_len
     return word_arr, tag_arr, position_arr
+
 
 def get_affections_ids(words, target_index, max_sent_len):
     
@@ -180,7 +184,7 @@ def get_affections_ids(words, target_index, max_sent_len):
     pos_arr = np.zeros((max_sent_len,), dtype='int32')
     neg_arr = np.zeros((max_sent_len,), dtype='int32')
     
-    shift = 0# max_sent_len - len(words)
+    shift = 0  # max_sent_len - len(words)
     for i in range(len(words)):
         if words[i] in pos_seed:
             pos_arr[i+shift] = pos_seed[words[i]]
@@ -190,6 +194,7 @@ def get_affections_ids(words, target_index, max_sent_len):
             pos_arr[i+shift] = 100
             neg_arr[i+shift] = 100
     return pos_arr, neg_arr
+
 
 def get_sentiment_indices(tags_all):
     """
@@ -249,7 +254,7 @@ def cut_sentence(target, words_all, tags_all, max_sent_len):
     Return:
         xx
     """
-    #if len(words_all) <= max_sent_len:
+    # if len(words_all) <= max_sent_len:
     #    return words_all, tags_all
     break_sign = ('。', '！', '？')  # 结束标记
     break_sign_2 = '，'  # 遇到两次停止
@@ -294,11 +299,13 @@ def split_sentence(text):
     text = re.split(r'。|！|？', text)
     sentence_all = {}
     tm = 0
-    for offset,i in enumerate(text):
-        if i =='':
+    print(text)
+    for offset, i in enumerate(text):
+        if i == '':
             continue
         else:
             ci = build_test_data_from_crf(i, False)
+            print('ci is', ci)
             for words in ci.split(' '):
                 try:
                     word = words.split('/')[0]
@@ -311,16 +318,16 @@ def split_sentence(text):
     return sentence_all
 
 
-
 def load_test_data(text):
     """
     加载测试数据
     """
     # 构造测试数据
-    word_voc = pickle.load(open('./model/word_voc.pkl', 'rb+'))
-    tag_voc = pickle.load(open('./model/tag_voc.pkl', 'rb+'))
+    word_voc = pickle.load(open('model/word_voc.pkl', 'rb+'))
+    tag_voc = pickle.load(open('model/tag_voc.pkl', 'rb+'))
     
     lines = split_sentence(text)
+    print('lines is', lines)
     test_count = len(lines)
     
     test_sentence = np.zeros((test_count, args.max_sent_len), dtype='int32')  # sent
@@ -337,7 +344,7 @@ def load_test_data(text):
         words, tags = cut_sentence(target, words_all, tags_all, args.max_sent_len)  # sentence  截取
         target_index = words.index(target) if target in words else 0  # target 在句子中的下标
         word_arr, tag_arr, position_arr = \
-            get_sentence_ids(words,tags,word_voc,tag_voc,target_index,args.max_sent_len)
+            get_sentence_ids(words, tags, word_voc, tag_voc, target_index, args.max_sent_len)
         pos_arr, neg_arr = get_affections_ids(words, target_index, args.max_sent_len)
         
         test_sentence[i, :] = word_arr[:]
@@ -356,59 +363,49 @@ def predict_model(text):
     test_sentence, test_tag, test_position, test_pos_position, test_neg_position = test_data[:]
     # 重新加载模型
     print('Predict...')
-    model = load_model('./model/binary-window_lstm.h5')
+    model = load_model('model/binary-window_lstm.h5')
+    # print(model.get_config())
+    print(test_sentence)
     pre = model.predict([test_sentence])
-    if pre:
-        ppre = pd.DataFrame(lines).T
-        ppre['pred'] = pd.DataFrame(pre)[0]
-        ppre = pd.DataFrame(ppre.values,columns=['id','target','sentence','pred'])
+    # print(pre)
+    # if pre:
+    ppre = pd.DataFrame(lines).T
+    ppre['pred'] = pd.DataFrame(pre)[0]
+    ppre = pd.DataFrame(ppre.values, columns=['id', 'target', 'sentence', 'pred'])
     
-        result = {}
-        for iid in set(ppre.id):
-            dd = ppre[ppre['id']==iid]
-            rs = {}
-            for j in dd.index:
-                rs[dd['target'][j]] = dd['pred'][j]
-            result[iid] = rs
-        return result
-    else:
-        result = dict()
-        return result
-    
-    
-    
-    
-    
+    result = dict()
+    for iid in set(ppre.id):
+        dd = ppre[ppre['id'] == iid]
+        rs = {}
+        for j in dd.index:
+            rs[dd['target'][j]] = dd['pred'][j]
+        result[iid] = rs
+    return result
+# else:
+#     result = dict()
+#     return result
+
 
 if __name__ == '__main__':
     
     t0 = time.time()
       
     label_voc = {'neg': 0, 'pos': 1}
-    text = '患者无明显诱因下出现胸痛，双下肢未见水肿。今补充诊断：肺部感染。患者舌红，苔黄腻，脉弦细予荆银合剂2瓶疏风清热。'
-    #text = '患者十年前出现无明显诱因下胸闷、心悸、恶心，无胸痛。'
+    # text1 = '患者无明显诱因下出现胸痛，双下肢未见水肿。今补充诊断：肺部感染。患者舌红，苔黄腻，脉弦细予荆银合剂2瓶疏风清热。'
+    text1 = '患者十年前出现无明显诱因下胸闷、心悸、恶心，无胸痛。'
     
-    result = predict_model(text)
+    result = predict_model(text1)
     result_list = []
     
     single_dic = {}
-    for i,j in result.items():
+    for i, j in result.items():
         single_dic.update(j)
-    for word,value in single_dic.items():
-        result_dic = {}
-        result_dic['word'] = word
+    for word1, value in single_dic.items():
+        result_dic = dict()
+        result_dic['word'] = word1
         result_dic['value'] = value
         result_list.append(result_dic)
-        
-    
-    print (result_list)
-    
+
+    print(result_list)
 
     print('Done in %.1fs!' % (time.time()-t0))
-
-
-
-
-
-
-

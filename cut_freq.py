@@ -1,5 +1,3 @@
-# -*- encoding:utf-8 -*-
-__author__ = '出门向右'
 """
     基于特定症状分词接口
     input:一段需要分词的文本
@@ -23,16 +21,14 @@ def cut_sentence(sentence, string=False):
     """
     if not string:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
-            words.append([key.word,key.flag])
+        for key in pseg.cut(sentence, HMM=True):
+            words.append([key.word, key.flag])
         return words
     else:
         words = []
-        for key in pseg.cut(sentence,HMM = True):
+        for key in pseg.cut(sentence, HMM=True):
             words.append(key.word + '/' + key.flag)
         return ' '.join(words)
-
-
 
 
 def format_words_tags(words_tags):
@@ -47,8 +43,6 @@ def format_words_tags(words_tags):
     return ''.join(words) + '/symptom'
 
 
-
-
 def build_test_data_from_crf_cut(text, sty_json=True):
     """
     根据crf识别结果构建测试语料
@@ -56,8 +50,8 @@ def build_test_data_from_crf_cut(text, sty_json=True):
     init(text)
     pattern_sub_sign = re.compile('[<|>]')
     pattern_sp = re.compile('(<.*?>/x)')
-
-    file_json = open(ROOT + '/temp/result_symptomDic.json','r')  # xx个
+    file_json = open('temp/result_symptomDic.json', 'r')
+    # file_json = open(ROOT + '/temp/result_symptomDic.json', 'r')  # xx个
     json_list = json.load(file_json)
     file_json.close()
     
@@ -77,7 +71,7 @@ def build_test_data_from_crf_cut(text, sty_json=True):
         sentence = ''.join(sentence)
         sentence_correct = sentence
         words_tags = cut_sentence(sentence_correct, string=True)  # 分词
-        finds = pattern_sp.findall(words_tags) # 提取症状词标记信息
+        finds = pattern_sp.findall(words_tags)  # 提取症状词标记信息
         for find in finds:
             find_sub = format_words_tags(find)
             index = find_sub.rindex('/')
@@ -104,14 +98,12 @@ def build_test_data_from_crf_cut(text, sty_json=True):
         return words_tags
 
 
-
 if __name__ == '__main__':
-    
-    
-    text = '患者今晨发热38℃，头痛咳嗽，咳痰，量少色白，质稀'
+
+    text = '患者今晨发热38℃，头痛咳嗽，咳痰，量少色白，质稀，初步诊断为感冒'
     
     a = build_test_data_from_crf_cut(text)
-    print (a)
+    print(a)
 
     
 

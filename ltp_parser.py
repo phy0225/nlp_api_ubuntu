@@ -5,6 +5,7 @@ from pyltp import Parser
 from cut_seg_tag_parser import build_test_data_from_crf
 from flask import jsonify
 
+
 def segmentor_tag(content):
     result = build_test_data_from_crf(content)
 #    [{'term': '你', 'type': 'r'}, 
@@ -16,8 +17,8 @@ def segmentor_tag(content):
 #     {'term': '', 'type': 'symptom'},
 #     {'term': '<', 'type': 'x'}]
     
-#2018_1_6: find that the formula of the result is abnormal(as above)
-#result will allway end with ['', '<', '>']
+# 2018_1_6: find that the formula of the result is abnormal(as above)
+# result will always end with ['', '<', '>']
 #    for i in result:
 #        if i['term'] in ['', '<', '>'] or len(i['term']) == 0:
 #            result.remove(i)
@@ -41,11 +42,11 @@ def segmentor_tag(content):
 def parse(content):
     words_list, tags_list, symptom_flag_list = segmentor_tag(content)
     print(words_list, tags_list, symptom_flag_list)
-    parser = Parser() # 初始化实例
+    parser = Parser()  # 初始化实例
     try:
         parser.load('./ltp/ltp_data/parser.model')  # 加载模型
     except:
-        print ('load parser model failed, can not find model in ./ltp/ltp_data/parser.model')
+        print('load parser model failed, can not find model in ./ltp/ltp_data/parser.model')
 #        parser.load('C:\\Users\\01055221\\Desktop\\API_NLP\\ltp\\ltp_data\\parser.model')  # 加载模型
     # 模型地址重新部署时需要更新
 #    test = parser.parse(['患者', '无', '胸痛'],
@@ -71,9 +72,3 @@ def parse(content):
         return b
     else:
         return jsonify({'message': {'content': '长度不得为零'}})
-
-
-
-
-
-
